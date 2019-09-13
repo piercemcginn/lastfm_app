@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!--------------------------------------------------------------------------------------------------->
+    <title>LastFM App</title>
+  </head>
+  <body>
+    <h1>LastFM App</h1>
+<!--------------------------------------------------------------------------------------------------->
+<div class="jumbotron">
+  <h1 class="display-4">Welcome</h1>
+  <p class="lead">Enter information in the fields below to retrieve answer from LastFM</p>
+  <hr class="my-4">
+  <p>See text boxes for what they do</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+<!--------------------------------------------------------------------------------------------------->
+  <form role='form' method='POST' action='/' id='bandName'>
+    <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Artist</span>
+    </div>
+    <input type="text" class="form-control" name="bandName" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Get related artists">
+    </div>
+  <button type="submit" class="btn btn-primary" form="bandName">Submit</button>
+</form>
+<!--------------------------------------------------------------------------------------------------->
+<form role='form' method='POST' action='/' id='User'>
+  <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">User</span>
+  </div>
+  <input type="text" class="form-control" name="User" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Get top artists">
+  </div>
+<button type="submit" class="btn btn-primary" form="User">Submit</button>
+</form>
+<!--------------------------------------------------------------------------------------------------->
+<form role='form' method='POST' action='/' id='bro0'>
+  <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">User</span>
+  </div>
+  <input type="text" class="form-control" name="bro0" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Get recommended artists">
+  </div>
+<button type="submit" class="btn btn-primary" form="bro0">Submit</button>
+</form>
+<!--------------------------------------------------------------------------------------------------->
+<form role='form' method='POST' action='/'>
+  <div class="form-group">
+    <label for="bro1">User 1</label>
+    <input type="text" class="form-control" id="bro1" name="bro1" placeholder="Enter user to get recommendations for">
+    <label for="bro2">User2</label>
+    <input type="text" class="form-control" id="bro1" name="bro2" placeholder="Enter user to provide recommendations">
+    </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<!--------------------------------------------------------------------------------------------------->
+<form role='form' method='POST' action='/'>
+  <div class="form-group">
+    <label for="art1">Artist One</label>
+    <input type="text" class="form-control" id="art1" name="art1" placeholder="Enter artist to cross-reference">
+    <label for="art2">Artist Two</label>
+    <input type="text" class="form-control" id="art2" name="art2" placeholder="Enter artist to cross-reference">
+    </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<!--------------------------------------------------------------------------------------------------->
+<form role='form' method='POST' action='/'>
+  <div class="form-group">
+    <label for="gra1">User</label>
+    <input type="text" class="form-control" id="gra1" name="gra1" placeholder="Enter user to make graph for">
+    <label for="gra2">Nodes</label>
+    <input type="text" class="form-control" id="gra2" name="gra2" placeholder="Enter number of artists">
+    <label for="gra3">Threshold</label>
+    <input type="text" class="form-control" id="gra3" name="gra3" placeholder="Enter lower threshold for relation factor">
+    </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<!--------------------------------------------------------------------------------------------------->
+</div><!--end jumbotron-->
+<!--------------------------------------------------------------------------------------------------->
+
+
+<!--------------------------------------------------------------------------------------------------->
+
+<div class="container">
+  <div class="col">
+      {{dfhtml|safe}}
+  </div>
+</div>
+
+
+
+<!-- <table class="table">
+{% for band in df %}
+<tr>
+  <tr>
+<td>{{band}}</td>
+  </tr>
+</tr>
+{% endfor %}
+</table> -->
+
+<!-- <table class="table">
+  <tr>
+    <th>Index</th>
+    <th>Related Artist</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>entry2</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>entry2</td>
+  </tr>
+
+</table> -->
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
